@@ -1,5 +1,7 @@
 input.onGesture(Gesture.Shake, function () {
-    strip.showColor(neopixel.rgb(randint(1, 255), randint(1, 255), randint(1, 255)))
+    strip.setPixelColorRange(0, neopixel.hsv_picker(randint(1, 220)), 20)
+    strip.setPixelColorRange(20, neopixel.hsv_picker(randint(1, 220)), 20)
+    strip.setPixelColorRange(40, neopixel.hsv_picker(randint(1, 200)), 20)
     strip.show()
 })
 let strip: neopixel.Strip = null
